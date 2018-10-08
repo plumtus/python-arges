@@ -260,7 +260,7 @@ class ArgesClient:
             image (str or numpy.ndarray): image file name or image array (RGB)
             uniformed (bool): If true indicate the image has the unimformed format (360x360, face centered)
 
-        Returns: Tuple (person, group, confidence)
+        Returns: Tuple (person, group, confidence), or None when no matched person was found.
         """
         params = {"group-id": gid, "uniformed": "true" if uniformed else "false"}
         images = {"image-file": image}
